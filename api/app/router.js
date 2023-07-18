@@ -15,9 +15,6 @@ module.exports = app => {
   router.get('/user/myinfo', controller.user.getMyInfo);
   router.get('/user/getuser', controller.user.getUserInfoById);
   
-  router.post('/friend/search', controller.firend.findFirendByNumber);
-  router.post('/friend/apply', controller.firend.applyFirend);
-  router.get('/friend/list', controller.firend.firendApplyList);
 
   // socket.io
   io.of('/').route('exchange', io.controller.nsp.exchange);

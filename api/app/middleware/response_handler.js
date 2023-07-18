@@ -3,7 +3,7 @@ async function verifyPermission(ctx) {
   let fag = false;
   do {
     // 控制器 account、default 下的接口不需要认证
-    const ignore = ['/account/'];
+    const ignore = ['/account/','/default/'];
     for (let index = 0; index < ignore.length; index++) {
       const route = ignore[index];
       if (ctx.request.url.indexOf(route) == 0) {
@@ -13,7 +13,7 @@ async function verifyPermission(ctx) {
     }
 
     if (fag == true) break;
-
+    
     fag = await ctx.service.user.verifyPermission(
       ctx.request.header.userid,
       ctx.request.header.logintype || 'web',

@@ -36,9 +36,9 @@ module.exports = appInfo => {
       },
     },
     redis: {
-      host: 'redis',
+      host: '192.168.1.175',
       port: 6379,
-      auth_pass: 'lfluYk4reffZDjzzXfeNA2ub9odfJ1Ic',
+      auth_pass: '123456',
       db: 0,
     },
    
@@ -47,10 +47,10 @@ module.exports = appInfo => {
   config.mongoose = {
     client: {
       // 使用root用户名连接egg_chat数据库，认证库为admin
-      url: `mongodb://mongodb:27017/egg_chat?authSource=admin`,
+      url: `mongodb://192.168.1.175:27017/egg_chat?authSource=admin`,
       options: {
         user: 'dbroot',
-        pass: 'Gri42Mvyk3j2PXIiTdn6CCA8JDSST7yv',
+        pass: '123456',
         useUnifiedTopology:true
       },
     },
@@ -76,8 +76,8 @@ module.exports = appInfo => {
   config.redis = {
     client: {
       port: 6379,          // Redis port
-      host: "redis",       // Redis host
-      password: 'lfluYk4reffZDjzzXfeNA2ub9odfJ1Ic',
+      host: "192.168.1.175",       // Redis host
+      password: '123456',
       db: 0,
     },
   }
