@@ -18,6 +18,11 @@ class DefaultController extends Controller {
         const result = await ctx.service.chatgpt.SendMsg(messages);
         ctx.body = result;
       }
+    async test2() {
+        const { ctx , app} = this;
+        const user = await this.ctx.service.user.findByNameDB('chenzhuquan');
+        ctx.body = user ? user : "查询数据为空";
+    }
 }
 
 module.exports = DefaultController;

@@ -7,13 +7,23 @@ describe('test/app/service/user.test.js', () => {
       ctx = app.mockContext();
     });
   
-    // it('findByName()', async () => {
-    //   const user = await ctx.service.user.findByNameDB('284485094@qq.com');
-    //   assert(user!=null && user.account == '284485094@qq.com');
+    // it('demoNewUser()', async () => {
+    //   const user = await ctx.service.user.demoNewUser();
+    //   console.log("user:",user)
+    //   assert(true);
     // });
    
-    // it('findUserbyId()', async () => {
-    //     const user = await ctx.service.user.findUserbyId('6406a2de2150111ba8d98170');
-    //     assert(user!=null && user.account == '284485094@qq.com');
+    // it('demoFindAccount1()', async () => {
+    //     // const user = await ctx.service.user.demoFindAccount(account);
+    //     const user = await ctx.service.user.demoFindAccount();
+    //     console.log("user:",user)
+    //     assert(user);
     // });
+
+    // 删除用户
+    // it('demoDeleteAccount()', async ()=>{
+    //     const user = await ctx.service.user.demoDeleteAccount();
+    //     console.log("user:",user)
+    //     // assert(user);
+    // })
   });

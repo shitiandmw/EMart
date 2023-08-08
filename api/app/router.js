@@ -12,6 +12,8 @@ module.exports = app => {
   router.get('/default/test', controller.default.test);
   router.post('/default/test', controller.default.test);
 
+  router.get('/user/addfriend', controller.newTest.findPeopleInfo);
+
   router.get('/user/myinfo', controller.user.getMyInfo);
   router.get('/user/getuser', controller.user.getUserInfoById);
   

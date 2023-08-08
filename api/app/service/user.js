@@ -241,6 +241,48 @@ class UserSevice extends Service {
   }
 
   //
+
+  /**
+   * 创建用户demo
+   */
+  async demoNewUser() {
+    let user = new this.ctx.model.User();
+    user.account = "zqvaecn@163.com";
+     await user.save();
+    return user;
+  }
+
+  /**
+   * 查询所有用户demo
+   * @returns 
+   */
+  async demoFindAll()
+  {
+    return this.ctx.model.User.find({});
+  }
+  
+  /**
+   * 查询所有用户带@qq.com的
+   * @returns 
+   */
+
+  async demoFindAccount()
+  {
+    const searchQuery = { account: /@qq.com/i };
+    return this.ctx.model.User.find(searchQuery);
+  }
+  /**
+   * 删除所有用户带qq.com的
+  */
+  async demoDeleteAccount()
+  {
+    const searchQuery = { account: /@qq.com/i };
+    return this.ctx.model.User.deleteMany(searchQuery);
+  }
+ 
+
+
+
 }
 
 module.exports = UserSevice;
